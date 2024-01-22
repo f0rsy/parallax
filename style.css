@@ -1,0 +1,316 @@
+@font-face {
+  font-family: "K2D";
+  src: url(media/fonts/K2D-ExtraBold.ttf);
+  src: url(media/fonts/K2D-Medium.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --transition: all 750ms cubic-bezier(0.095, 0.755, 0, 1);
+}
+
+body {
+  font-family: "K2D";
+  background-color: #151515;
+  color: #fff;
+  width: 1920px;
+}
+
+header {
+  width: 1920px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #593d49;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  margin-left: 120px;
+}
+
+nav {
+  flex: 1;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  font-size: 20px;
+  display: inline;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.8s;
+}
+
+nav ul li a:hover {
+  color: rgb(74, 48, 62);
+}
+
+.input {
+  border-style: none;
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  outline: none;
+  border-radius: 50%;
+  transition: .5s ease-in-out;
+  background-color: #7e4fd400;
+  padding-right: 40px;
+  color: #fff;
+}
+
+.input::placeholder,
+.input {
+  font-size: 18px;
+  color: transparent;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border-style: none;
+  border-radius: 50%;
+  pointer-events: painted;
+  background-color: transparent;
+  transition: .2s linear;
+}
+
+.icon:focus ~ .input,
+.input:focus {
+  box-shadow: none;
+  width: 250px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 3px solid #ffffff;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.gradient {
+  background: linear-gradient(
+    0deg,
+    #151515 18.65%,
+    rgba(21, 21, 21, 0.8) 30.88%,
+    rgba(21, 21, 21, 0.6) 47.37%,
+    rgba(21, 21, 21, 0.4) 62.6%,
+    rgba(21, 21, 21, 0.2) 80.84%,
+    rgba(21, 21, 21, 0) 98.32%
+  );
+  z-index: 2;
+  height: 520px;
+  width: 100%;
+  bottom: 0px;
+  position: absolute;
+}
+
+.content {
+  will-change: transform;
+}
+
+.frameOne {
+  height: 1080px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.frameOne h1 {
+  margin: 0;
+  position: absolute;
+  font-size: 250px;
+  margin-left: 275px;
+  bottom: 180px;
+  z-index: 1;
+  transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+  transition: var(--transition);
+}
+
+.layer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  transition: var(--transition);
+}
+
+.baseLayer {
+  transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+  z-index: 0;
+}
+
+.frontLayer {
+  transform: translate3d(0, calc(var(--scrollTop) / 4.7), 0);
+  z-index: 2;
+}
+
+.middleLayer {
+  transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+}
+
+.frameTwo {
+  width: 1920px;
+  height: 1080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.frameTwo h2 {
+  font-size: 48px;
+  border-bottom: 7px solid #fff;
+  padding: 25px;
+  margin-bottom: 110px;
+}
+
+.frameTwo video {
+  width: 1360px;
+  height: 800px;
+}
+
+.frameThree {
+width: 1920px;
+height: 1080px;
+}
+
+.slider {
+  width: 1920px;
+  max-width: 100%;
+  height: 100;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.slider-line {
+  width: 1920px;
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: all ease 1s;
+}
+
+.frameFour {
+  width: 1920px;
+  height: 1080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.frameFour h2 {
+  font-size: 48px;
+  border-bottom: 7px solid #fff;
+  padding: 25px;
+  margin-bottom: 110px;
+}
+
+.frameFour img {
+  width: 1300px;
+  height: 880px;
+}
+
+.frameFive {
+  width: 1920px;
+  height: 1080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.frameFive h2 {
+  font-size: 48px;
+  border-bottom: 7px solid #fff;
+  padding: 25px;
+  margin-bottom: 110px;
+  margin-bottom: 180px;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.frameFive input {
+  color: #fff;
+  width: 800px;
+  height: 150px;
+  border: 7px solid #fff;
+  background: none;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 160px;
+}
+
+.frameFive button {
+  border: 7px solid #fff;
+  width: 450px;
+  height: 80px;
+  background: none;
+  color: #fff;
+  margin-bottom: 130px;
+  font-size: 30px;
+}
+
+footer {
+  border-top: 7px solid #9e617b;
+  padding: 25px;
+}
+
+.foot {
+  width: 1920px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #593d49;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.backColor {
+  background: linear-gradient(
+    180deg,
+    rgba(21, 21, 21, 0.7) 15.29%,
+    #3d2c33 45.59%,
+    #593d49 78.05%
+  );
+}
+
+
